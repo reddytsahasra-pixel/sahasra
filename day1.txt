@@ -1,0 +1,295 @@
+#1.   program to find maximum between two numbers
+
+n,m = map(eval,input().split())
+if (n >m):
+       print(f"Maximum = {n}")
+else:
+      print(f"Maximum = {n}")
+
+#.program to find maximum between three numbers
+
+n,m,o = map(eval,input().split())
+if (n >m and n>o):
+       print(f"Maximum = {n}")
+elif (m>n and m>o):
+	print(f"Maximum = {m}")
+else:
+      print(f"Maximum = {o}")
+
+#program to check whether a number is positive, negative or zero
+n=int(input())
+if n >0:
+      print(f" {n} is positive")
+else:
+    print(f"{n} is negetive")
+
+
+
+#Program to check divisibility of a number
+n=int(input())
+if(n%5 == 0 and n%11 == 0):
+        print(f"Number is divisible by 5 and 11")
+else:
+     print(f"not divisible")
+
+
+
+#program check whether a number is even or odd
+n=int(input())
+if(n%2 == 0):
+      print(f"{n} is even number")
+else:
+      print(f"{n} is odd number")
+
+
+
+#program to check Leap Year
+n= int(input())
+if((n%4 ==0 and n%100 != 0 )or n%400==0):
+          print("LEAP YEAR")
+else:
+        print("NOT A LEAP YEAR")
+
+#program to check whether a character is alphabet or not
+a=input()
+if(a.isaplha()):
+       print(f"{a} is a aplhabet")
+else:
+      print("not an aplhabet")
+
+
+#program to check vowel or consonant
+n=intput()
+if n in 'aeiouAEIOU':
+      print(f"{n} is vowel")
+else:
+      print(" consonant")
+
+
+
+
+#program to check whether a character is alphabet, digit or special character
+n=intput()
+if n.alpha():
+     print(f"{n} is alphabet")
+elif n.isdigit():
+     print(f"{n} is number")
+else:
+      print("special character")
+
+
+
+
+#program to check whether a character is Uppercase or Lowercase
+n=intput()
+if n.isupper():
+     print(f"{n} is upppercase alphabet"
+else:
+     print(f"{n} is lowercase")
+
+
+
+
+#program to enter week number and print day of week
+n=int(input())
+if(n==1):
+       print("Monday")
+elif(n==2):
+       print("Tuesday")
+elif(n==3):
+       print("Wednesday")
+elif(n==4):
+       print("Thursday")
+elif(n==5):
+       print("Friday")
+elif(n==6):
+       print("Satday")
+elif(n==7):
+       print("sunday")
+else:
+     print("Invalid")
+
+
+
+#program to find number of days in month
+n=int(input())
+if(n == 1 or n == 3 or n==5 or n==7 or n==8 or n== 10 or n== 12):
+     print("It contains 31 days")
+elif(n==2):
+      print("It contains 28/29 days")
+else:
+      print("It contains 30 days")
+
+
+
+
+#program to count total number of notes in given amount
+amount = int(input("Input amount: "))
+count500 = count100 = count50 = count20 = 0
+count10 = count5 = count2 = count1 = 0
+if amount >= 500:
+    count500 = amount // 500
+    amount = amount % 500
+if amount >= 100:
+    count100 = amount // 100
+    amount = amount % 100
+if amount >= 50:
+    count50 = amount // 50
+    amount = amount % 50
+if amount >= 20:
+    count20 = amount // 20
+    amount = amount % 20
+if amount >= 10:
+    count10 = amount // 10
+    amount = amount % 10
+if amount >= 5:
+    count5 = amount // 5
+    amount = amount % 5
+if amount >= 2:
+    count2 = amount // 2
+    amount = amount % 2
+if amount >= 1:
+    count1 = amount // 1
+    amount = amount % 1
+print("Total number of notes:")
+print(f"500: {count500}")
+print(f"100: {count100}")
+print(f"50: {count50}")
+print(f"20: {count20}")
+print(f"10: {count10}")
+print(f"5: {count5}")
+print(f"2: {count2}")
+print(f"1: {count1}")
+
+
+#program to check whether triangle is valid or not if angles are given
+a=int(input())
+b=int(input())
+c=int(input())
+if(a+b+c==180):
+    print("VALID")
+else:
+     print("NOT VALID")
+
+
+#program to check whether triangle is valid or not if sides are given
+a=int(input())
+b=int(input())
+c=int(input())
+if(b+c>a and a+b>c and a+c > b):
+          print("Triangle is valid")
+else: 
+    print("Invalid")
+
+
+#program to check whether triangle is equilateral, scalene or isosceles
+a=int(input())
+b=int(input())
+c=int(input())
+if(a == b and b==c and c==a): 
+      print("EQUILATERAL TRIANGLE")
+elif( a==b or a==c or b==c): 
+      print("ISOSCELES TRIANGLE")
+else:
+     print("SCALENE TRIANGLE")
+
+
+#Program to find roots of quadratic equation
+import math
+a = float(input())
+b = float(input())
+c = float(input())
+discriminant = (b ** 2) - (4 * a * c)
+if discriminant > 0:
+    root1 = (-b + math.sqrt(discriminant)) / (2 * a)
+    root2 = (-b - math.sqrt(discriminant)) / (2 * a)
+    print(f"Root1: {root1:.2f}")
+    print(f"Root2: {root2:.2f}")
+elif discriminant == 0:
+    root1 = root2 = -b / (2 * a)
+    print(f"Root1 = Root2: {root1:.2f}")
+else:
+    realPart = -b / (2 * a)
+    imaginaryPart = math.sqrt(-discriminant) / (2 * a)
+    print(f"Root1: {realPart:.2f} + {imaginaryPart:.2f}i")
+    print(f"Root2: {realPart:.2f} - {imaginaryPart:.2f}i")
+
+
+#program to calculate profit or loss
+c=int(input())
+s=int(input())
+if s > c:
+    p=s-c
+    print(f"Profit : p")
+else:
+    l=c-s
+     print(f"Loss:l")
+
+
+# Program to enter student marks and find percentage and grade
+
+a = float(input())
+b = float(input())
+c = float(input())
+d = float(input())
+e = float(input())
+total = a + b + c + d + e
+percentage = (total / 500) * 100  
+if percentage >= 90:
+    print("Grade: A")
+elif percentage >= 80:
+    print("Grade: B")
+elif percentage >= 70:
+    print("Grade: C")
+elif percentage >= 60:
+    print("Grade: D")
+else:
+    print("Grade: F")
+
+#program to enter basic salary and calculate gross salary of an employee
+basic_salary = int(input())
+if basic_salary <= 10000:
+    hra = basic_salary * 0.20  
+    da = basic_salary * 0.80   
+elif 10001 <= basic_salary <= 20000:
+    hra = basic_salary * 0.25  
+    da = basic_salary * 0.90   
+else:  # basic_salary >= 20001
+    hra = basic_salary * 0.30  
+    da = basic_salary * 0.95   
+gross_salary = basic_salary + hra + da
+print(f"Gross salary = {gross_salary:.2f}")
+
+
+
+#program to calculate electricity bill
+total_amt=0
+units=int(input())
+if unit <= 50:
+    total_amt = unit * 0.50
+elif unit <= 100:
+    total_amt = 25 + (unit - 50) * 0.75
+elif unit <= 200:
+    total_amt = 25 + 37.5 + (unit - 100) * 1.20
+else:  # unit > 200
+    total_amt = 25 + 37.5 + 120 + (unit - 200) * 1.50
+sur_charge=total_amt*0.20
+net_amt=total+amt+sur_charge
+print(net_amt)
+
+
+#program to create calculator using switch case
+a, b, c = input().split()
+a = float(a)
+c = float(c)
+if b == '+': 
+    print(a + c)
+elif b == '-':
+    print(a - c)
+elif b == '*':
+    print(a * c)
+elif b == '%':
+    print(a % c)
+else:
+    print("Invalid operator")
+
