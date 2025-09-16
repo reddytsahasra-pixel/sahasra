@@ -1,0 +1,82 @@
+Print factors and count of factors
+"""n=int(input())
+c=2
+for i in range(2,int((n**0.5)+1)):
+    if(n % i==0):
+        if(i==n//i):
+            print(i)
+            c+=1
+        else:
+            print(i,n//i)
+            c+=2
+print(c)
+
+2. check a given number is perfect square or not run the loop for 5 inputs 
+p=int(input())
+for i in range(p):
+    n = int(input())
+    c=2
+    for i in range(2,int((n**0.5)+1)):
+        if(n % i==0):
+            if(i==n//i):
+                print(i)
+                c+=1
+            else:
+                print(i,n//i)
+                c+=2
+    if c%2==0:
+        print("Not Perfect square")
+    else:
+        print(" Perfect square")
+
+3. check prime numbers in series 10 to 20
+for i in range(10,21):
+n = int(input())
+c=2
+for i in range(2,int((n**0.5)+1)):
+    if(n % i==0):
+        if(i==n//i):
+            c+=1
+        else:
+            c+=2
+if c==2:
+    print(" Prime number")
+else:
+    print(" not prime")
+
+4.read input from user and find the count of prime and composite numbers also find the factorial of min and max value from given input number.
+
+"""n=int(input())
+pc,npc=0,0
+min,max=9,0
+while n!=0:
+    r=n%10
+    w=1
+    if r<min:
+        min=r
+    elif r>max:
+        max=r
+    for i in range(2,int(r**0.5)+1):
+        if r%i==0:
+            w=0
+            break
+    if w==1:
+        pc+=1
+    else:
+        npc+=1
+    n=n//10
+print(pc,npc)
+while max!=0:
+    t=max%10
+    fact=1
+    for i in range(t,0,-1):
+        fact=fact*i
+    max=max//10
+    print(fact)
+while min != 0:
+    k = min % 10
+    f = 1
+    for i in range(k, 0, -1):
+        f = f * i
+    min = min // 10
+    print(f)
