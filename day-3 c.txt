@@ -1,0 +1,100 @@
+		Splitting And Joining
+if n=74928 output will be 8,2,9,4,7
+n=74928
+while(n!=0):
+    r=n%10
+    print(r,end=' ')
+    n=n//10
+output:   8 2 9 4 7 
+
+if n=74928 output will be 28,92,49,74,7
+n=74928
+while(n!=0):
+    r=n%100
+    print(r,end=' ')
+    n=n//10
+output:28 92 49 74 7 
+
+
+if n = 74928 output is 28,49,7
+n=74928
+while(n!=0):
+    r=n%100
+    print(r,end=' ')
+    n=n//100
+output:28 49 7
+
+
+if n=74928 output is 28,49
+n=74928
+while(n>=10):
+    r=n%100
+    print(r,end=' ')
+    n=n//100
+output:28 49
+
+if n=7e4928 output is 928,492,749
+n=74928
+while(n>=100):
+    r=n%1000
+    print(r,end=' ')
+    n=n//10
+output:928 492 749 
+
+count how many even digits are there in a number
+n=74928
+c=0
+while(n!=0):
+    r=n%10
+    if(r%2==0):
+        c=c+1
+    n=n//10
+print(c)
+output:3
+
+
+
+reverse of a number
+n=74928
+c=0
+while(n!=0):
+    r=n%10
+    c=c*10+r
+    n=n//10
+print(c)
+output:82947
+
+palindrome or not 
+n=74928
+t=n
+c=0
+while(n!=0):
+    r=n%10
+    c=c*10+r
+    n=n//10
+if(t==c):
+    print("palindrome")
+else:
+    print("not a palindrome")
+output:not a palindrome
+
+
+
+
+count how many number are there 
+i)In the even position even digit 
+ii)odd position odd digits
+n=74624
+p=1
+c=0
+while(n!=0):
+    r=n%10
+    if((r%2==0 and p%2==0) or(r%2!=0 and p%2!=0)):
+        c=c+1
+    p=p+1
+    n=n//10
+print(c)
+    
+output:3
+
+

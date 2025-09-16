@@ -1,0 +1,171 @@
+					conversions
+write a program to convert any base to any desired base 
+
+n=int(input())
+d=int(input("enter the base of the given number"))
+g=int(input("enter the base to convert"))
+if(d!=0):
+    p=0
+    s=0
+    while(n!=0):
+        rr=n%10
+        if(rr<=d):
+            r=rr
+            c=r*(d**p)
+            p=p+1
+            s=s+c
+            n=n//10
+        else:
+            print("invalid")
+else:
+    s=n
+pp=0
+ss=0
+while(s!=0):
+    r=s%g
+    c=r*(10**pp)
+    pp=pp+1
+    ss=ss+c
+    s=s//g
+print(ss)
+
+output:
+11001
+enter the base of the given number2
+enter the base to convert8
+31
+
+
+if the n is 43267 extract 69,26,2,43 and again convert 76+62+23+34=____________
+n=43267
+s=0
+while(n!=0):
+    r=n%10
+    s=s*10+r
+    n=n//10
+ss=0
+while(s>=10):
+    r=s%100
+    ss=ss+r
+    s=s//10
+print(ss)
+    
+    
+output:
+195
+
+
+
+if n = 54926 extract the numbers which are in the odd positions and  factorial of each number 
+
+n=54926
+p=1
+s=0
+while(n!=0):
+    r=n%10
+    if(p%2!=0 and r%2!=0):
+        s=s*10+r
+    p=p+1
+    n=n//10
+while(s!=0):
+    f=1
+    r=s%10
+    for i in range(1,r+1):
+        f=f*i
+    s=s//10
+    print(f,i)
+
+
+120 5
+362880 9
+
+if n is 5497 find the minimum and the 5497 into base of minimum number and find the factorial of each digit 
+
+n=5497
+t=n
+mi=9
+while(n!=0):
+    r=n%10
+    if(r<mi):
+        mi=r
+    n=n//10
+p=0
+s=0
+while(t!=0):
+    r=t%mi
+    c=r*(10**p)
+    p=p+1
+    s=s+c
+    t=t//mi
+print(s)
+while(s!=0):
+    f=1
+    r=s%10
+    for i in range(1,r+1):
+        f=f*i
+    s=s//10
+    print(i,f)
+
+output
+1111321
+1 1
+2 2
+3 6
+1 1
+1 1
+1 1
+1 1
+
+
+if n=5497 with base 10 find the maximum number from that number and covert that number with base of maximum number reverse the result and again convert the number into base 10 
+
+n=54926
+t=n
+ma=0
+while(n!=0):
+    r=n%10
+    if(r > ma):
+        ma=r
+    n=n//10
+p=0
+s=0
+while(t!=0):
+    r=t%ma
+    c=r*(10**p)
+    p=p+1
+    s=s+c
+    t=t//ma
+print(s)
+q=0
+while(s!=0):
+    r=s%10
+    q=q*10+r
+    s=s//10
+print(q)
+pp=0
+ss=0
+while(q!=0):
+    r=q%10
+    cc=r*(9**pp)
+    pp=pp+1
+    ss=ss+cc
+    q=q//10
+print(ss)
+    
+output:
+
+83308
+80338
+52766   
+
+
+
+
+
+
+
+
+
+
+
+
